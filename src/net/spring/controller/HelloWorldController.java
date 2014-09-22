@@ -76,7 +76,7 @@ public class HelloWorldController {
 		
 		Map<String,List<User>> map = new HashMap<String,List<User>>();
 		List<User> list = service.findAllUser(5);
-//		List<User> list = null;
+		System.out.println(list.size());
 		if(list != null){
 			map.put("userlist", list);
 		}
