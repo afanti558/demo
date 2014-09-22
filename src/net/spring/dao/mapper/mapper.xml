@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 注意这里的语句尾部千万不要写上“;”,不识别 -->	
+<!-- mybatis的mapper接口,id为其中的method -->
+<mapper namespace="net.spring.dao.mapper.Mapper">
+
+    <resultMap type="User" id="alluser">  
+        <id property="id" column="id"/>  
+        <result property="name" column="name"/>  
+    </resultMap>  
+  
+  <!-- 这里的id要和接口中的方法同名 -->
+    <select id="findAllUser" resultMap="alluser" parameterType="map">  
+         <!-- select id,name from  student --> 
+        select id,categoryname as name from  kr_qy_aboutus where id = 429
+    </select> 
+    
+     <insert id="saveBaseInfomation" parameterType="map">
+     	<selectKey keyProperty="id" resultType="int" order="BEFORE">
+			select DESCRIPTION_SEQ.nextval from dual
+		</selectKey>
+    	insert into kr_qy_aboutus(id,categoryname) values(#{id},#{name})
+    </insert> 
+    
+    
+    <select id="accountUser" resultType="int">
+    	select count(id) from kr_qy_aboutus
+    </select> 
+    
+    <!-- 一对一对上的就不需要映射了 -->
+    <select id="queryOneProduct" resultType="Product" parameterType="int">
+    	select * from kr_qy_products where id = #{id}
+    </select>
+
+</mapper>
