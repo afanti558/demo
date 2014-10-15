@@ -1,4 +1,4 @@
-package com.lxf.utils;
+package net.lxf.util;
 
 import java.io.File;
 import java.io.InputStream;

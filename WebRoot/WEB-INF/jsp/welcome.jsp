@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ include file="/WEB-INF/jsp/common.jsp"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,7 +7,7 @@
 	<title>hello页面</title>
 </head>
 <body>
-	<h1>hello頁面</h1>
+	<h1>基本框架搭建Spring MVC+MyBatis</h1>
 	<div>
 		<c:forEach items="${userlist}" var="pres" varStatus="status">
 			<div>${pres.id}    -------->    ${pres.name}</div>

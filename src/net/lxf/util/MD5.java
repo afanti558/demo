@@ -1,4 +1,4 @@
-package com.lxf.utils;
+package net.lxf.util;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;

@@ -1,4 +1,4 @@
-package com.lxf.domain;
+package net.spring.entity;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.support.SqlSessionDaoSupport;

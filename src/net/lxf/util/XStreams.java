@@ -1,4 +1,4 @@
-package com.lxf.utils;
+package net.lxf.util;
 
 import net.spring.entity.User;
 

@@ -1,7 +1,6 @@
 package net.spring.service.impl;
 
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,9 +19,5 @@ public class ServiceImpl implements net.spring.service.Service{
 		return dao.findAllUser(limit);
 	}
 
-	@Override
-	public void saveBaseInfomation(Map map) {
-		dao.saveBaseInfomation(map);
-	}
 	
 }
